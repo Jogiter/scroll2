@@ -1,24 +1,30 @@
 {
-  "name": "jogiter",
-  "version": "1.0.0",
-  "description": "jogiter cli",
+  "name": "scroll2",
+  "version": "0.0.2",
+  "description": "scroll to a postion",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --fix *.js"
   },
-  "bin": {
-    "jogiter": "./bin/jogiter"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jogiter/scroll2"
   },
-  "keywords": ["jogiter", "cli"],
+  "keywords": [
+    "requestAnimationFrame",
+    "scroll2"
+  ],
   "author": "jogiter",
-  "license": "MIT",
+  "license": "wtfpl",
   "devDependencies": {
     "eslint": "^4.15.0",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^5.1.1",
+    "nightmare": "^3.0.1"
   }
 }
