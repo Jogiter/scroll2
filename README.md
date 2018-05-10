@@ -1,5 +1,31 @@
-## [使用 javascript 获取视口/窗口大小（宽度和高度）](https://andylangton.co.uk/blog/development/get-viewportwindow-size-width-and-height-javascript)
+## scroll2
 
+Lightweight, cross-browser and highly customizable animated scrolling
+
+### install
+
+>yarn add scroll2
+
+### usage
+
+>scroll2(scrollY = 0, duration = 1000, callback)
+
+|param|type|description|
+|:----|:----|:----|
+|scrollY|Number|scroll end position|
+|duration|Number|scroll duration, default 1000|
+|callback|Function|callback when scroll ended|
+
+```js
+const scroll2 = require('scroll2');
+scroll2(1000, 500, (scrollY) => {
+  console.log(`scroll end at ${scrollY}`);
+})
+```
+
+### [使用 javascript 获取视口/窗口大小（宽度和高度）](https://andylangton.co.uk/blog/development/get-viewportwindow-size-width-and-height-javascript)
+
+----
 
 ### 使用 jQuery 方法获取窗口或文档的大小
 
