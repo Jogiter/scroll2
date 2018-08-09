@@ -4,7 +4,7 @@ require('raf').polyfill()
  * get scrollHeight
  * @return {Number} scrollHeight
  */
-function getScrollHeight() {
+function getScrollHeight () {
   var body = document.body
   var html = document.documentElement
   var height = Math.max(
@@ -25,7 +25,7 @@ function getScrollHeight() {
  * get scrollTop
  * @return {Number} scrollTop
  */
-function getScrollTop() {
+function getScrollTop () {
   return document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
 }
 
@@ -35,7 +35,7 @@ function getScrollTop() {
  * @param  {Number}   [duration=1000]   scroll time
  * @param  {Function} callback          scroll end callback, callback(scrollY, id)
  */
-function scroll2(scrollY = 0, duration = 1000, callback) {
+function scroll2 (scrollY = 0, duration = 1000, callback) {
   var id
   var speed
   // scrollTop is a intValue
@@ -45,7 +45,7 @@ function scroll2(scrollY = 0, duration = 1000, callback) {
   scrollY = scrollHeight <= scrollY ? scrollHeight : scrollY // hack max-than-scrollHeight
   speed = (scrollY - scrollTop) * 1000 / 60 / duration
 
-  function _scroll2() {
+  function _scroll2 () {
     var scrollTop = getScrollTop()
     if (
       (speed > 0 && scrollTop + speed > scrollY) ||
@@ -62,4 +62,4 @@ function scroll2(scrollY = 0, duration = 1000, callback) {
   id = requestAnimationFrame(_scroll2)
 }
 
-module.exports = scroll2
+export default scroll2

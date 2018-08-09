@@ -1,0 +1,17 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "module": false,
+        "targets": {
+          "browsers": ["last 2 versions", "> 0.5%", "not ie <= 8"]
+        }
+      }
+    ],
+    "stage-2"
+  ],
+  "plugins": [
+    "transform-runtime"
+  ]
+}
