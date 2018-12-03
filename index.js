@@ -62,4 +62,4 @@ function scroll2 (scrollY = 0, duration = 1000, callback) {
   id = requestAnimationFrame(_scroll2)
 }
 
-export default scroll2
+module.exports = module.exports.export = scroll2
