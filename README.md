@@ -132,6 +132,34 @@ function getScrollHeight() {
 }
 ```
 
+### 获取网页元素的绝对位置
+
+```js
+function getElementLeft(element){
+  var actualLeft = element.offsetLeft;
+  var current = element.offsetParent;
+
+  while (current !== null){
+    actualLeft += current.offsetLeft;
+    current = current.offsetParent;
+  }
+
+  return actualLeft;
+}
+
+function getElementTop(element){
+  var actualTop = element.offsetTop;
+  var current = element.offsetParent;
+
+  while (current !== null){
+    actualTop += current.offsetTop;
+    current = current.offsetParent;
+  }
+
+  return actualTop;
+}
+```
+
 
 ### 阅读链接
 
@@ -139,6 +167,7 @@ function getScrollHeight() {
 * [Get viewport/window size (width and height) with javascript](https://andylangton.co.uk/blog/development/get-viewportwindow-size-width-and-height-javascript)
 * [How to get height of entire document with JavaScript?
   ](https://stackoverflow.com/questions/1145850/how-to-get-height-of-entire-document-with-javascript)
+* [用Javascript获取页面元素的位置](http://www.ruanyifeng.com/blog/2009/09/find_element_s_position_using_javascript.html)
 
 ### LISENCE
 
