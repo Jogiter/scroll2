@@ -14,7 +14,8 @@ let base = {
     path: path.resolve(__dirname, './'),
     filename: '[name].min.js',
     library: pkg.name,
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    globalObject: 'typeof self !== \'undefined\' ? self : this'
   },
   // 从输出的 bundle 中排除依赖
   externals: {
