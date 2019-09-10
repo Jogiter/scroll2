@@ -2,7 +2,7 @@
   "name": "scroll2",
   "version": "0.0.4",
   "description": "scroll to a postion",
-  "main": "index.js",
+  "main": "index.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --fix *.js",
