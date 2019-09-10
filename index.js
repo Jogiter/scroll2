@@ -37,13 +37,12 @@ export function getScrollTop () {
  */
 export default function scroll2 (scrollY = 0, duration = 1000, callback) {
   let id
-  let speed
   // scrollTop is a intValue
   const scrollTop = getScrollTop()
   const scrollHeight = getScrollHeight()
   scrollY = scrollY < 0 ? 0 : scrollY // hack negative
   scrollY = scrollHeight <= scrollY ? scrollHeight : scrollY // hack max-than-scrollHeight
-  speed = (scrollY - scrollTop) * 1000 / 60 / duration
+  const speed = (scrollY - scrollTop) * 1000 / 60 / duration
 
   function _scroll2 () {
     let scrollTop = getScrollTop()
