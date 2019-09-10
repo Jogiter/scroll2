@@ -1,6 +1,6 @@
 {
   "name": "scroll2",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "scroll to a postion",
   "main": "index.min.js",
   "scripts": {
