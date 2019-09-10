@@ -8,7 +8,7 @@ const isDev = process.env.ENV === 'development'
 let base = {
   mode: isDev ? 'development' : 'production',
   entry: {
-    index: './index.js',
+    index: './index.js'
   },
   output: {
     path: path.resolve(__dirname, './'),
@@ -24,63 +24,63 @@ let base = {
   },
   module: {
     rules: [{
-        test: /\.js$/,
-        enforce: 'pre',
-        use: [{
-          loader: 'eslint-loader',
-          options: {
-            fix: true,
-            failOnError: true
-          }
-        }]
+      test: /\.js$/,
+      enforce: 'pre',
+      use: [{
+        loader: 'eslint-loader',
+        options: {
+          fix: true,
+          failOnError: true
+        }
+      }]
+    },
+    {
+      test: /\.js$/,
+      exclude: /(node_modules|bower_components)/,
+      use: [{
+        loader: 'babel-loader'
+      }]
+    },
+    {
+      test: /\.css$/,
+      use: [{
+        loader: 'style-loader'
       },
       {
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: [{
-          loader: 'babel-loader',
-        }]
-      },
-      {
-        test: /\.css$/,
-        use: [{
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              url: true, // css 中 url 处理
-            }
-          }
-        ]
-      },
-      {
-        test: /\.(png|jp(e)?g|gif|svg)$/,
-        use: [{
-          loader: 'url-loader',
-          options: {
-            limit: 1024 * 20
-          }
-        }]
-      },
-      {
-        test: /\.tpl/,
-        loader: 'raw-loader'
-      },
-      {
-        test: /\.html/,
-        use: [{
-          loader: 'html-loader',
-          options: {
-            minimize: true,
-            // removeComments: false, // 保留 ssi
-            // removeAttributeQuotes: false, // 保留引号
-            // collapseWhitespace: true
-            // more options:
-            // https://github.com/kangax/html-minifier#options-quick-reference
-          }
-        }]
+        loader: 'css-loader',
+        options: {
+          url: true // css 中 url 处理
+        }
       }
+      ]
+    },
+    {
+      test: /\.(png|jp(e)?g|gif|svg)$/,
+      use: [{
+        loader: 'url-loader',
+        options: {
+          limit: 1024 * 20
+        }
+      }]
+    },
+    {
+      test: /\.tpl/,
+      loader: 'raw-loader'
+    },
+    {
+      test: /\.html/,
+      use: [{
+        loader: 'html-loader',
+        options: {
+          minimize: true
+          // removeComments: false, // 保留 ssi
+          // removeAttributeQuotes: false, // 保留引号
+          // collapseWhitespace: true
+          // more options:
+          // https://github.com/kangax/html-minifier#options-quick-reference
+        }
+      }]
+    }
     ]
   },
   resolve: {
