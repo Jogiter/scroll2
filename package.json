@@ -27,7 +27,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
-    "eslint": "^4.15.0",
+    "eslint": "^6.3.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-loader": "^2.1.0",
     "eslint-plugin-import": "^2.13.0",
